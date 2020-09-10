@@ -1,0 +1,31 @@
+21st August,2020
+Display Movie details with the help of CodeFirstApproach
+Display DateofBirth Of customer 
+
+Done in MovieCustomerMVCWithAuthen
+
+
+
+
+
+22nd August,2020
+
+Add And Delete with Movie and make genere different table
+
+Done in MovieCustomerMVCwithAuthe
+
+
+
+
+
+24th August ,2020
+
+1.Difference between Single() and SingleorDefault()
+Single() expects one and only one element in the collection.
+Single() throws an exception when it gets no element or more than one elements in the collection.
+If specified a condition in Single() and result contains no element or more than one elements then it throws an exception.
+SingleOrDefault() will return default value of a data type of generic collection if there is no elements in a colection or for the specified condition.
+SingleOrDefault() will throw an exception if there is more than one elements in a colection or for the specified condition.
+
+2.Perform Edit and delete in Movie table too
+ Done in MovieCustomerMvcAuthen

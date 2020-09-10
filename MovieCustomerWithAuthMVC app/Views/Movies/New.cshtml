@@ -1,0 +1,49 @@
+﻿@model MovieCustomerWithAuthMVC_app.Models.ViewModel.NewMovieViewModel
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New Movie</h2>
+@using (Html.BeginForm("Save", "Movies"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.MovieName)
+
+        @Html.TextBoxFor(m => m.MovieName, new { @class = "form-control" })
+
+        @Html.ValidationMessageFor(a => a.MovieName)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.GenreId)
+        @Html.DropDownListFor(m => m.GenreId, new SelectList(Model.Genres, "Id", "GenreName"), " ", new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.GenreId)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(a => a.ReleaseDate)
+        @Html.TextBoxFor(m => m.ReleaseDate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.ReleaseDate)
+    </div>
+
+
+    <div>
+        @Html.LabelFor(a => a.NoInStocks)
+        @Html.TextBoxFor(m => m.NoInStocks, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.NoInStocks)
+
+    </div>
+
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
+
+    <button type="submit" class="btn btn-primary">Save</button>
+
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,15 @@
+
+20th August assignment 
+1.Dsiplay the list Movies and their Genre in the HTML table.
+2. Display Customers BirthDate In Coustomer’s  In Index.Cshtml page.
+
+21th August  assignment 
+
+1. create a gener table link it with the movie table using  viewmodel then print the deatils 
+
+24 th Augut Assignment
+
+1.create new ActionResult Edit and update in Movies. 
+
+
+

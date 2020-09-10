@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MovieCustomerWithAuthMVC_app.Models.Movie>
+@{ ViewBag.Title = "ReadOnlyIndex";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+<div style="display:inline-block"><h2>Movie List</h2></div>
+
+
+@if (!Model.Any())
+{
+<p>My Form</p> }
+            else
+            {
+
+<table id="movieTable" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Movie Id</th>
+            <th>Movie Name</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>@item.Id</td>
+    <td>@Html.ActionLink(item.MovieName, "Details", "Movies", new { id = item.Id }, null)</td>
+    <td>@item.ReleaseDate</td>
+    <td>@item.Genre.GenreName</td>
+
+
+
+
+</tr>}
+
+
+    </tbody>
+</table>}
